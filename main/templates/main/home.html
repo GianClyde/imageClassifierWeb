@@ -1,0 +1,60 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Sans:wght@700&family=PT+Serif&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/home.css'%}"/>
+    <title>Home</title>
+</head>
+<body>
+    <div class="main">
+        <h1 class="header">SnapPet</h1>
+
+
+        <div class="instructions-wrapper">
+            <p class="instruction">This app will classify your image if it's within these three classes</p>
+        </div>
+        
+        <div class="holder">
+            <div class="images-row">
+                <div class="cat-wrapper">
+                    <div class="sub-header">Cat</div>
+                    <div class="img-wrapper">
+                        <img src="{% static 'images/catlogo.png'%}">
+                    </div>
+               </div>
+    
+               <div class="dog-wrapper">
+                    <div class="sub-header">Dog</div>
+                    <div class="img-wrapper">
+                        <img src="{% static 'images/doglogo.png'%}">
+                    </div>
+               </div>
+    
+               <div class="bird-wrapper">
+                    <div class="sub-header">Bird</div>
+                    <div class="img-wrapper">
+                        <img src="{% static 'images/birdlogo.png'%}">
+                    </div>
+               </div>
+            </div>
+           
+            <div class="upload-wrapper">
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    {{form.as_p}}
+
+                    <input type="submit" value="Submit" class="submit"/>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

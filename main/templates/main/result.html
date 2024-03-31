@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Sans:wght@700&family=PT+Serif&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/result.css'%}"/>
+        <title>Results</title>
+</head>
+<body>
+    <div class="main">
+        <h1 class="header">Classification Result</h1>
+
+        <div class="result-row-1">
+            <div class="image-wrapper">
+                <div class="img-header">
+                    Uploaded Image
+                </div>
+                <div class="img-main-wrapper">
+                        <img src="{{image_path_url}}">
+                      
+                </div>
+           
+            </div>
+
+            <div class="eval-metrics">
+                <div class="img-header">
+                    Evaluation Metrics
+                </div>
+                <div class="metrics-row">
+                    <div class="metrics-table-row">
+                       <div class="value-wrapper">
+                            {{val_precision}}
+                       </div>
+                       <div class="label">
+                            Precision
+                       </div>
+                    </div>
+
+                    <div class="metrics-table-row">
+                        <div class="value-wrapper">
+                            {{val_f1}}
+                        </div>
+                        <div class="label">
+                             F1
+                        </div>
+                     </div>
+
+                     <div class="metrics-table-row">
+                        <div class="value-wrapper">
+                            {{val_recall}}
+                        </div>
+                        <div class="label">
+                             Recall
+                        </div>
+                     </div>
+                    
+                    
+            
+                </div>
+            </div>
+        </div>
+        
+        <div class="result-row-2">
+            <div class="accuracy-graph-wrapper">
+                <div class="img-main-wrapper-graph">
+
+                    <img src="data:image/png;base64,{{ accuracy_graph_img }}" alt="Accuracy Plot" class="graph">
+    
+                </div>
+            </div>
+
+            <div class="predicted-class-wrapper">
+                <div class="img-header">
+                    Predicted Class
+                </div>
+                <div class="image-results">
+                    {% if predicted_class == "cats" %}
+                    <img  class="r-image" src="{% static 'images/cat_r.gif'%}">
+                    {% elif predicted_class == "dogs"%}
+                    <img  class="r-image" src="{% static 'images/dog_r.gif'%}">
+                    {% elif predicted_class == "birds"%}
+                    <img  class="r-image" src="{% static 'images/bird_r.gif'%}">
+                    {%else%}
+                    <img  class="r-image" src="{% static 'images/none.gif'%}">
+                    {%endif%}
+                </div>
+                <div class="class-wrapper">
+                    {{predicted_class}}
+                </div>
+            </div>
+        </div>
+
+        <div class="result-row-1">
+            <a href="{% url 'home'%}">Classify Again</a>
+        </div>
+    </div>
+</body>
+</html>

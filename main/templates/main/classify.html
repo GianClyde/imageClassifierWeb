@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/classify.css'%}"/>
+    <title>Classification</title>
+</head>
+<body>
+    <div class="main">
+        <div class="img-wrapper">
+            <img src="{% static 'images/loading.gif'%}">
+        </div>
+        <div id="output" class="output"><p id="changingText">Initial Text</p></div>
+        <script>
+            // Array of texts to cycle through
+            var texts = [
+                        "Preprocessing images...",
+                        "Initializing neural network...",
+                        "Loading model architecture...",
+                        "Optimizing parameters...",
+                        "Training classifier...",
+                        "Fetching image data...",
+                        "Augmenting dataset...",
+                        "Compiling training data...",
+                        "Tuning hyperparameters...",
+                        "Fine-tuning layers...",
+                        "Extracting features...",
+                        "Organizing labels...",
+                        "Validating data...",
+                        "Generating predictions...",
+                        "Enhancing accuracy...",
+                        "Analyzing image content...",
+                        "Balancing classes...",
+                        "Evaluating performance...",
+                        "Cross-validating results...",
+                        "Optimizing inference speed..."
+                    ];
+            var index = 0;
+            var changingTextElement = document.getElementById("changingText");
+          
+            // Function to change text every second
+            function changeText() {
+                changingTextElement.textContent = texts[index];
+                index = (index + 1) % texts.length;
+            }
+          
+            // Initial call to changeText
+            changeText();
+          
+            // Set interval to call changeText every second
+            setInterval(changeText, 2000);
+        
+            // Flag variable to track if redirection has occurred
+            var redirectFlag = false;
+        
+            // Redirect after 1 minute if not already redirected
+            setTimeout(function() {
+                if (!redirectFlag) {
+                    redirectFlag = true;
+                    window.location.href = "{% url 'bridge' image%}";
+                }
+            }, 1000); // 1 minute in milliseconds
+        </script>
+        
+    </div>
+</body>
+</html>

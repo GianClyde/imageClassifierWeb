@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    padding: 2%;
+    background-color: black;
+   
+}
+
+.header{
+    color: bisque;
+    font-family: 'Archivo Black', sans-serif;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.image-wrapper{
+    border: solid gray;
+    padding: 1%;
+    width: 20%;
+    border-radius: 25px;
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 250px;
+}
+
+.img-header{
+    color: bisque;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+.img-main-wrapper{
+    width: 90%;
+    margin: auto;
+    padding: 1%;
+}
+
+img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.result-row-1{
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.result-row-1::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.eval-metrics{
+    width: 70%;
+    float: left;
+    border: solid gray;
+    padding: 1%;
+    border-radius: 25px;
+    height: 250px;
+}
+
+.metrics-row{
+    width: 100%;
+    overflow: hidden;
+    padding-left: 2.5%;
+}
+
+.metrics-row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.metrics-table-row{
+    width: 30%;
+    float: left;
+    padding: 1%;
+   
+}
+
+.value-wrapper{
+    background-color: bisque;
+    border-radius: 25px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    padding-top: 37%;
+}
+
+.label{
+    width: 100%;
+    color: bisque;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+}
+table, th, td {
+    border:1px solid black;
+    font-size: 12;
+    background-color: white;
+    padding: 1%;
+    
+  }
+
+table, th{
+    font-family: 'Archivo Black', sans-serif;
+    width: 80%;
+  }
+
+table td{
+    font-family: 'Roboto', sans-serif;
+    width: 20%;
+    text-align: center;
+}
+
+.prediction-class{
+    color: wheat;
+}
+
+.result-row-2{
+    width: 100%;
+    padding: 2%;
+}
+
+.result-row-2::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.accuracy-graph-wrapper{
+    float: left;
+    border: solid gray;
+    border-radius: 25px;
+    width: 50%;
+    height: 300px;
+    padding: 1%;
+    overflow-y: auto;
+    margin-right: 2.5%;
+}
+
+.graph{
+    width: 100%;
+    height: 100%;
+}
+
+.img-main-wrapper-graph{
+    width: 100%;
+    overflow: auto;
+}
+
+.image-results{
+    width: 100%;
+    padding: 1%;
+}
+
+.class-wrapper{
+    font-family: 'Archivo Black', sans-serif;
+    color: bisque;
+    text-align: center;
+}
+
+.r-image{
+    width: 100%;
+    object-fit: contain;
+}
+
+.predicted-class-wrapper{
+    float: left;
+    width: 40%;
+    padding: 1%;
+    border: solid gray;
+    border-radius: 25px;
+    height: 300px;
+}

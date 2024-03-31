@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    color: bisque;
+    font-family: 'Archivo Black', sans-serif;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.main{
+    padding: 2%;
+    background-color: black;
+    height: 100vh;
+}
+
+.holder{
+    margin: auto;
+    height: 400px;
+    width: 70%;
+    border-radius: 25px;
+    border: solid gray 2px;
+    padding: 1%;
+    
+}
+
+
+.cat-wrapper{
+    float: left;
+    width: 25%;
+    margin-right: 5%;
+    margin-left: 7.5%;
+}
+
+img{
+    width: 100%;
+}
+
+.img-wrapper{
+    background-color: white;
+    width: 100%;
+    border-radius: 50px;
+
+}
+
+.dog-wrapper{
+    float: left;
+    width: 25%;
+    margin-right: 5%;
+   
+}
+
+.sub-header{
+    text-align: center;
+    padding: 1%;
+    font-family: 'Archivo Black', sans-serif;
+    background-color: black;
+    color: bisque;
+}
+.bird-wrapper{
+    float: left;
+    width: 25%;
+    margin-right: 3%;
+}
+.instructions-wrapper{
+    margin: auto;
+    width: 70%;  
+    margin-bottom: 0.5%; 
+}
+
+.images-row{
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.images-row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.instruction{
+    color: bisque;
+    font-family: 'Roboto', sans-serif;
+}
+
+#id_image{
+    color: black;
+    background-color: bisque;
+    width: 70%;
+    margin-left: 8%;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 3%;
+}
+
+.submit{
+    font-family: 'Roboto', sans-serif;
+    padding: 1%;
+    margin-left: 40%;
+    background-color: bisque;
+    border-radius: 25px;
+    border: none;
+    color: black;
+    width: 15%;
+
+}
+
+.submit:hover{
+    padding: 1%;
+    margin-left: 40%;
+    background-color: white;
+    border-radius: 25px;
+    border: none;
+    color: bisque;
+    width: 15%;
+    transition: 0.5s;
+}
